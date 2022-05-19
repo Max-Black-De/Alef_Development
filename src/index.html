@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Let's shoping</title>
+</head>
+
+<body>
+    <div class="main" id="app">
+
+        <!-- верхняя часть навигация-->
+        <header class="header">
+            <nav class="navbar">
+                <p class="logo"><b>LOGO</b></p>
+                <ul class="menu">
+                    <li class="account">
+                        <img @onclick="" src="assets/account.png" alt="account">
+                    </li>
+                    <li class="favourites">
+                        <img src="assets/heart.png" alt="favourites">
+                    </li>
+                    <li class="shoping-cart">
+                        <img src="assets/bag.png" alt="shoping_cart">
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!-- main часть -->
+        <!-- боди верхняя (основная) -->
+        <main>
+            <div class="first-body">
+                <!-- левая сторона -->
+                <div class="top-left-side">
+                    <div class="pictures">
+                        <!-- миниатюры -->
+                        <div class="mini_pictures">
+                            <img v-for="(elem, key) in miniImages" @click="tooglePicture(key)" :src="elem">
+                        </div>
+                        <div class="full-pictures">
+                            <img class="main-pict" :src="newLink" alt="">
+                        </div>
+                    </div>
+    
+                </div>
+                <!-- правая сторона -->
+                <div class="top-right-side">
+                    <div class="item-info">
+                        <h1 class="name-of-item">Пижама для девочек</h1>
+                        <p class="art">Арт. 02765/46</p>
+    
+                        <div class="feedback">
+                            <p>Отзывы</p>
+                            <div class="stars">
+                                <img src="assets/black_star.svg" alt="star">
+                                <img src="assets/black_star.svg" alt="star">
+                                <img src="assets/black_star.svg" alt="star">
+                                <img src="assets/black_star.svg" alt="star">
+                                <img src="assets/white_star.svg" alt="star">
+                            </div>
+                            <p class="feedback-counter">14 отзывов</p>
+                            <img src="assets/right_arrow.svg" alt="arrow-right">
+                        </div>
+
+                    </div>
+                    <div class="price">
+                        <div class="price-info">
+                            <p class="new-price">800 ₽ </p>
+                            <p class="old-price"> 1 500 ₽</p>
+                            <img src="assets/right_arrow.svg" alt="arrow-right">
+                        </div>
+                        <div class="discount-info">
+                            <button class="discount-btn">скидка -36%</button>
+                            <button class="discount-btn">акция -20%</button>
+                        </div>
+                    </div>
+
+                    <div class="items-params">
+                        <select type="text" class="choise_size">
+                            <option disabled value="">Выбери размер</option>
+                            <option v-for="item in sizeItems" value="lkjlkj">{{ item }}</option>
+                        </select>
+                        <p class="find-out-size">Определить размер</p>
+                    </div>
+
+                    <div class="add-to-cart">
+                        <div class="counter-of-items">
+                            <button class="plus" v-on:click="incrementFunc" >+</button>
+                            <p class="counter">{{ item }}</p>
+                            <button class="minus" @click="decrementFunc" >-</button>
+                        </div>
+                        <button class="add-item">Добавить в корзину</button>
+                        <button class="add-to-favourite">
+                            <img src="assets/white_heart.svg" alt="">
+                        </button>
+                    </div>
+                    <p class="one-click">Купить в 1 клик</p>
+                    <div class="line"></div>
+                    <div class="other-params">
+                        <p class="product-description"><img src="assets/Closes.svg" alt="clothes">Описание товара</p>
+                        <p class="delivery-method"><img src="assets/clock.svg" alt="delivery">Доставка и возврат</p>
+                        <p class="payment-method"><img src="assets/pay.svg" alt="payment">Способ оплаты</p>
+                    </div>
+    
+                </div>
+            </div>
+
+            <div class="midle-line"><a href="####1" class="midle">Посмотреть все стили</a></div>
+
+            <!-- боди нижняя -->
+            <div class="second-body">
+                <div class="bottom-left-side">
+                    <img class="full-size" src="pictures/full_picture.png" alt="">
+                </div>
+                <div class="bottom-right-side">
+                    <img src="pictures/first_picture.png" alt="" class="first">
+                    <img src="pictures/second_picture.png" alt="" class="second">
+                    <img src="pictures/third_picture.png" alt="" class="third">
+                    <img src="pictures/fourth.png" alt="" class="fourth">
+                </div>
+
+            </div>
+        </main>
+        
+        
+        <!-- нижняя часть (футер) -->
+        <footer class="footer">
+            <div class="for-customer">
+                <p>Покупателям</p>
+                <ul class="for-cust">
+                    <li class=""><a href="###1">Каталог</a></li>
+                    <li class=""><a href="###2">Акции</a></li>
+                    <li class=""><a href="###3">Бренды</a></li>
+                </ul>
+            </div>
+            
+            <div class="about-us">
+                <p>О нас</p>
+                <ul class="about">
+                    <li class=""> <a href="###4" class="">О компании</a></li>
+                    <li class=""> <a href="###5" class="">Новости</a></li>
+                    <li class=""> <a href="###6" class="">Команда</a></li>
+                </ul>
+            </div>
+
+            <div class="subscribtion">
+                <h1 class="find-out-first">Узнайте первыми о новинках и акциях</h1>
+                <input class="email-input" required="required" placeholder="Адрес электронной почты" type="email">
+                <button class="subsribe-btn" type="submit">Подписаться</button>
+            </div>
+        </footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        let app = new Vue({
+            el: "#app",
+            data: {
+                miniImages: {
+                    a: "pictures/mini_1.png",
+                    b: "pictures/mini_2.png",
+                    c: "pictures/mini_3.png",
+                    d: "pictures/mini_4.png",
+                    e: "pictures/mini_5.png",
+                    f: "pictures/mini_6.png",
+                },
+                maxiImages: {
+                    a: "pictures/maxi_1.png",
+                    b: "pictures/maxi_2.png",
+                    c: "pictures/maxi_3.png",
+                    d: "pictures/maxi_4.png",
+                    e: "pictures/maxi_5.png",
+                    f: "pictures/maxi_6.png",
+                },
+                newLink: "pictures/maxi_1.png",
+                sizeItems: {
+                    a: "S",
+                    b: "M",
+                    c: "L"
+                },
+                item: 0,
+            },
+            methods: {
+                tooglePicture: function(key) {
+                    this.newLink = this.maxiImages[key]
+                },
+                incrementFunc: function() {
+                    console.log("Hello")
+                    this.item = this.item + 1;
+                },
+                decrementFunc: function() {
+                    if (this.item > 0) {
+                        this.item = this.item - 1;
+                    }
+                },
+            }
+        })
+    </script>
+</body>
+</html>

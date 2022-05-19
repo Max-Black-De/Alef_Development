@@ -1,0 +1,431 @@
+html {
+}
+
+body {
+    max-width: 1390px;
+    margin: auto;
+}
+/* навигация */
+.navbar {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo {
+    width: 50%;
+    margin-left: 10%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 50%;
+    height: 24px;
+    margin-right: 10%;
+}
+.account {
+    order: 1;
+    margin-right: 24px;
+}
+.favourites {
+    margin-right: 24px;
+}
+.shoping-cart {
+    order: -1;
+}
+
+/* боди верхняя часть */
+.first-body {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    margin-top: 26px;
+}
+
+/* левая сторона */
+.top-left-side {
+    position: relative;
+    width: 50%;
+    margin-right: 0.58%; 
+    box-sizing: border-box;
+}
+.pictures {
+    display: flex;
+}
+.mini_pictures {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0 0 24px;
+    width: 10.2%;
+}
+.mini_pictures img {
+    margin-bottom:7px;
+}
+.mini_pictures img:hover {
+    width: 6em;
+    border: 1px solid #29e8de;
+}
+
+.main-pict {
+    width: 100%;
+}
+
+/* правая сторона */
+.top-right-side {
+    width: 50%;
+    margin-left: 0.58%; 
+    box-sizing: border-box;
+}
+
+.item-info {
+    width: 100%;
+}
+.name-of-item {
+    margin: 24px auto auto 20px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #333333;
+}
+.art {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    color: #828282;
+    margin: 8px auto auto 20px;
+}
+.feedback {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    color: #333333;
+    display: flex;
+    margin: 18px auto auto 20px;
+}
+.feedback .stars {
+    margin-left: 12px;
+}
+.feedback .feedback-counter {
+    margin-left: 4px;
+}
+
+.price {
+width: 100%;
+}
+.price-info {
+    margin: 20px auto auto 20px;
+    display: flex; 
+    align-items: center;
+}
+.price-info img {
+    margin-left: 12px;
+}
+.new-price {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #333333;
+}
+.old-price {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    text-decoration-line: line-through;
+    color: #828282;
+    margin-left: 12px;
+}
+
+.discount-info {
+    margin: 12px auto auto 20px;
+}
+.discount-btn {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    align-items: center;
+    letter-spacing: 0.04em;
+    color: #333333;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 4px 8px;
+    gap: 10px;
+    width: 91px;
+    height: 24px;
+    left: 0px;
+    top: 4px;
+    border: 1px solid #333333;
+}
+.discount-info :nth-child(2n) {
+    margin-left: 9px;
+}
+
+.items-params {
+    margin: 16px auto auto 20px;
+    width: 46%;
+}
+.items-params select{
+    box-sizing: border-box;
+    width: 100%;
+    height: 44px; 
+    border: 1px solid #333333;
+}
+.items-params p{
+    padding-top: 12px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;    
+    letter-spacing: 0.04em;
+    text-decoration-line: underline;    
+    color: #333333;
+}
+
+.add-to-cart {
+    margin: 25px auto 12px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.counter-of-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    width: 21.1%;
+    height: 38px;
+    background: #F2F2F2;
+    border: 1px solid #C4C4C4;
+}
+.counter-of-items button {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    color: #333333;
+    height: 100%;
+    border: none;
+
+}
+.add-to-cart .add-item  {
+    box-sizing: border-box;
+    margin-left: 12px;
+    width: 30.48%;
+    height: 44px;
+    background: #333333;
+    border: 1px solid #333333;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+}
+.add-to-cart .add-to-favourite {
+    box-sizing: border-box;
+    background: #333333;
+    margin-left: 4px;
+    border: 1px solid #333333;
+    color: #FFFFFF;
+    width: 6.6%;
+    height: 44px;
+}
+.one-click {
+    margin-left: 20px;
+    margin-bottom: 29px;
+}
+
+/* разделительная линия в правом блоке */
+.line {
+    border-top: 0.5px solid #C4C4C4;
+}
+.other-params {
+    margin: 24px auto auto 20px;
+}
+.other-params p {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    text-decoration-line: underline;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.other-params img {
+    margin-right: 6.5px;
+}
+
+/* средняя линия */
+.midle-line {
+    height: 28px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    text-decoration-line: underline;
+    color: #333333;
+    margin-top: 28px;
+}
+
+/* боди нижняя часть*/
+.second-body {
+    margin-top: 28px;
+    display: flex;
+}
+
+.bottom-left-side {
+    width: 50%;
+    margin-right: 0.58%;
+}
+.bottom-left-side .full-size {
+    width: 100%;
+}
+
+.bottom-right-side {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin-left: 0.58%;
+}
+.bottom-right-side img {
+    width: 48.8%;
+    margin-bottom: 2.33%;
+    margin-right: 2.33%;
+}
+.bottom-right-side img:nth-child(2n) {
+    margin-right: 0;
+}
+
+/* подвал */
+footer {
+    margin-top: calc(130px - 16px);
+    display: flex;
+    height: 184px;
+}
+.for-customer {
+    width: 25.4%;
+    margin-left: 7.2%;
+}
+.for-customer p {
+    margin-bottom: 8px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #333333;
+}
+.for-customer ul{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;    
+    letter-spacing: 0.04em;
+    color: #333333;
+}
+.for-customer li {
+    padding-top: 8px;
+}
+
+.about-us {
+    margin-left: 1.15%;
+    width: 25.4%;
+}
+.about-us p{
+    margin-bottom: 8px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #333333;
+}
+.about-us ul{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    color: #333333;
+}
+.about-us li {
+    padding-top: 8px;
+}
+.subscribtion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 1.15%;
+    width: 32.52%;
+
+}
+.subscribtion h1 {
+    width: 100%;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #333333;
+}
+.subscribtion input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 17px;
+    width: 100%;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid #333333;
+}
+.subsribe-btn {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.2%;
+    height: 36px; 
+    background: #FFFFFF;
+    border: 1px solid #333333;
+    margin-top: 35px;
+}
